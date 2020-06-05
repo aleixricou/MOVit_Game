@@ -1,0 +1,71 @@
+{%extends "base_admin.html" %}
+
+{% set title=_("mail") %}
+
+{% block title %}
+{{_('Envío de codigo')}}
+{% endblock %}
+
+{% block content %}
+<style>
+body
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+</style>
+
+<body>
+<form action="/send_mail_admin" method="POST">
+  <div class="container">
+    <p>{{_('Por favor, introduce el nombre del jugador que deseas registrar, el correo electrónico donde deseas enviar el código de registro y el correo electrónico del terapeuta al que deseas asociar el jugador:')}}</p>
+    <hr>
+    <label for="name"><b>{{_('Nombre y apellidos')}}</b></label>
+    <input type="text" name="name" required>
+    <p>{{_('El código de 8 dígitos será generado de forma aleatoria y solo podrás saber cual es si el jugador decide comunicártelo.')}}</p>
+    <p style="color:red;">{{_('El correo electrónico no se ha podido enviar de forma satisfactoria. Por favor, revisa que las direcciones introducidas existan')}}</p>
+    <label for="email"><b>{{_('Correo electrónico del jugador')}}</b></label>
+    <input type="email" name="email" required>
+    <label for="email_t"><b>{{_('Correo electrónico del terapeuta')}}</b></label>
+    <input type="email" name="email_t" required>
+<hr>
+ <center> <button type="submit" class="btn btn-primary">{{_('Enviar')}}</button> </center>
+  </div>
+
+
+
+{% endblock %}

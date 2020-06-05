@@ -1,0 +1,25 @@
+{%extends "base.html" %}
+
+{% set title=_("idioma") %}
+
+{% block title %}
+{{_('Idioma')}}
+{% endblock %}
+
+{% block content %}
+<form action="/home" method="POST">
+
+  <!-- <div class="p-5 text-center">
+     <h2 class="display-4">{{_('Cambia el idioma')}}</h2>
+  </div> -->
+  <br><hr>
+  <div><p> <center><h3>{{_('Cambia el idioma:')}}</h3></p>
+  <button class="btn btn-primary" type="submit" name="idioma" value="ca">Català</button>
+  <button class="btn btn-primary" type="submit" name="idioma" value="es">Español</button>
+  <button class="btn btn-primary" type="submit" name="idioma" value="en">English</button></center>
+  <br><hr>
+  </div>
+  
+</form>
+{% endblock %}
+

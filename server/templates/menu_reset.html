@@ -1,0 +1,23 @@
+{%extends "base_admin.html" %}
+
+{% set title=_("reset") %}
+
+{% block title %}
+{{_('Menú de Reinicio')}}
+{% endblock %}
+
+{% block content %}
+  <!-- <div class="p-5 text-center">
+     <h2 class="display-4">{{_('Menú de gestión')}}</h2>
+  </div> -->
+  <div><p> <center><h3>{{_('Bienvenido al menú de reinicio de la base de datos')}}</h3></center></p> 
+<p>{{_('Recuerda que al reiniciar la base de datos, toda la información se perderà para siempre')}}</p>
+<p> <center>  {{_('¿Qué deseas hacer?')}} </p> 
+  <a class="btn btn-primary" href="/reset">{{_('Reiniciar la base de datos')}}</a>
+  <!-- <br><br> -->
+  <a class="btn btn-primary" href="/reset_usu">{{_('Eliminar todos los jugadores')}}</a></center>
+  <br><hr>
+  </div>
+
+
+{% endblock %}

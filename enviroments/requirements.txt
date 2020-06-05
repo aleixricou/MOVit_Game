@@ -1,0 +1,15 @@
+flask
+flask_sqlalchemy
+flask_security
+flask_babel
+flask_babelex
+flask_mail
+click
+email_validator
+jinja2
+datetime
+pandas
+xlsxwriter
+jsonify
+bcrypt
+Werkzeug==0.16.1

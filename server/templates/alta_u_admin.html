@@ -1,0 +1,66 @@
+{%extends "base_admin.html" %}
+
+{% set title=_("baja") %}
+
+{% block title %}
+{{_('Dar de baja jugador')}}
+{% endblock %}
+
+{% block content %}
+<style>
+body
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+</style>
+
+<body>
+<form action="/eliminar" method="POST">
+  <div class="container">
+    <p>{{_('Por favor, introduce el correo electrónico del jugador que deseas eliminar de la base de datos:')}}</p>
+    <hr>
+
+    <label for="email"><b>{{_('Correo electrónico')}}</b></label>
+    <input type="email" name="email" required>
+<hr>
+ <center> <button type="submit" class="btn btn-primary">{{_('Eliminar')}}</button> </center>
+  </div>
+
+
+
+{% endblock %}

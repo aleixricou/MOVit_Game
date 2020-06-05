@@ -1,0 +1,25 @@
+{%extends "base_admin.html" %}
+
+{% set title=_("registre") %}
+
+{% block title %}
+{{_('Menú de Registro')}}
+{% endblock %}
+
+{% block content %}
+  <!-- <div class="p-5 text-center">
+     <h2 class="display-4">{{_('Menú de gestión')}}</h2>
+  </div> -->
+  <div><p> <center><h3>{{_('Bienvenido al menú de registro')}}</h3>
+  {{_('¿Qué deseas hacer?')}} </p> 
+  <a class="btn btn-primary" href="/registre_codi_admin">{{_('Registrar jugador')}}</a>
+  <a class="btn btn-primary" href="/alta_u_admin">{{_('Dar de baja jugador')}}</a>
+<br><br>
+  <a class="btn btn-primary" href="/registre_terapeuta">{{_('Registrar terapeuta')}}</a>
+  <!-- <br><br> -->
+  <a class="btn btn-primary" href="/alta_admin">{{_('Dar de baja terapeuta')}}</a></center>
+  <br>
+  </div>
+
+
+{% endblock %}

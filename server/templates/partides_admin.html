@@ -1,0 +1,48 @@
+{%extends "base_admin.html" %}
+
+{% set title=_("partides") %}
+
+{% block title %}
+{{_('Partidas del Jugador')}}
+{% endblock %}
+
+{% block content %}
+
+<form action="/download_partides_a" method="POST">
+<br>
+<table class="table">
+    <thead>
+	<tr align="center">
+        <th>{{_('Dificultad')}}</th>
+	<th>{{_('Hitos')}}</th>
+	<th>{{_('Puntos')}}</th>
+	<th>{{_('Pausas')}}</th>
+	<th>{{_('Fecha')}}</th>
+      </tr>
+    </thead>
+{% for item in partides %}
+    <tbody>
+      <tr align="center">
+        <td>{{item.difficulty_partida}}</td>
+	<td>{{item.num_milestones}}</td>
+	<td>{{item.total_points}}</td>
+	<th>{{item.nparades}}</th>
+	<th>{{item.dia_partida}}</th>
+      </tr>
+    </tbody>
+<input type="hidden" id="usuari" name="usuari" value={{item.player}}>
+{% endfor %}
+
+  </table>
+<br>
+<!--<div class="p-5 text-right">
+     <p><font size="3">:)</font></p>
+</div>-->
+<div>
+    <center> <button type="submit" class="btn btn-primary">{{_('DESCARGA DE INFORMACIÓN')}}</button> </center>
+  </div>
+
+
+</form>
+
+{% endblock %}

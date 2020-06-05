@@ -1,0 +1,45 @@
+{%extends "base_terap.html" %}
+
+{% set title=_("users") %}
+
+{% block title %}
+{{_('Jugadores')}}
+{% endblock %}
+
+{% block content %}
+<!--
+  <div class="p-5 text-center">
+     <h2 class="display-4">Usuarios</h2>
+  </div> -->
+<br>
+<table class="table">
+    <thead>
+     <tr align="center">
+	<th>{{_('Nombre')}}</th>
+        <th>{{_('Correo electrónico')}}</th>
+	<th>{{_('Registrado')}}</th>
+	<th>{{_('Dificultad')}}</th>
+      </tr>
+    </thead>
+{% for item in users %}
+    <tbody>
+      <tr align="center">
+	<td>{{item.nom}}</td>
+        <td>{{item.email}}</td>
+	<td>{{item.registrat}}</td>
+	<td>{{item.dificulty}}</td>
+      </tr>
+    </tbody>
+{% endfor %}
+
+  </table>
+<br>
+<!--<div class="p-5 text-right">
+     <p><font size="3">:)</font></p>
+</div>-->
+<div> <center>
+     <a href="/download_users" target="blank"><button class="btn btn-primary">{{_('DESCARGA DE INFORMACIÓN')}}</button></a>
+<!--     <a href="/downloads2" target="blank"><button class="btn btn-primary">{{_('DESCARGA OPINIÓN')}}</button></a>--></center>
+</div>
+
+{% endblock %}

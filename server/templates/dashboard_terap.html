@@ -1,0 +1,21 @@
+{%extends "base_terap.html" %}
+
+{% set title=_("Dashboard_terapeuta") %}
+
+{% block title %}
+MOVit GAME
+{% endblock %}
+
+{% block subtitle %}
+{{_('Menú terapeutas')}}
+<hr>
+{% endblock %}
+
+{% block content %}
+  <div class="p-4 text-justify">
+     <p>{{_('¡Bienvenidos al menú para terapeutas!')}}</p>
+     <p>{{_('Si quieres ver a tus jugadores asignados, ve a la pestaña de jugadores. Si prefieres ver la información de un jugador en específico, dirígete a la ventana de búsqueda')}}</p>
+     <p>{{_('También puedes ir a la pestaña de registro para dar de alta o de baja a un jugador')}}</p>
+     <p>{{_('¡El equipo de MOVit GAME te desea que tengas una buena experiencia!')}}</p>
+  </div>
+{% endblock %}

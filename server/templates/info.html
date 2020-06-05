@@ -1,0 +1,23 @@
+{%extends "base.html" %}
+
+{% set title=_("información") %}
+
+{% block title %}
+{{_('Información')}}
+{% endblock %}
+
+{% block content %}
+<head>
+<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+</head>
+  <div>
+   <p>{{_('El proyecto MOVit Game tiene como objetivo desarrollar una plataforma interactiva de juego para promover la actividad física de personas con Duchenne usando la silla de ruedas MOVit. Esta silla tiene como hecho diferenciador que el control de dirección y velocidad se realiza mediante el movimiento cíclico de los brazos, en lugar de usar un joystick, lo que contribuye al ejercicio físico del paciente.')}}</p>
+   <p>{{_('MOVit Game está dirigido por Joan Lobo, Josep Maria Font y Daniela Tost desde el Centro de Investigación en Ingeniería Biomédica (CREB) de la 	  Universitat Politècnica de Catalunya (UPC) y en colaboración con el Hospital Sant Joan de Déu, Duchenne Parent Project España y el Institut de Robòtica i Informàtica Industrial (CSIC-UPC).')}}</p>
+	<p>{{_(' Este proyecto lo llevan a cabo Janet van der Graaf (estudiante de 4º curso de Ingeniería Biomédica), Aleix Ricou (estudiante de 4º curso de Ingeniería Industrial) que están realizando su Trabajo de Fin de Grado, y por un investigador recientemente titulado en Ingeniería Aeronáutica, Oriol Alís.')}}</p>
+  </div>
+{% endblock %}

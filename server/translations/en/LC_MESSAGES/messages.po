@@ -1,0 +1,893 @@
+# English translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-06-03 00:28+0200\n"
+"PO-Revision-Date: 2020-06-03 00:40+0200\n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: templates/admin.html:3
+msgid "Dashboard_admin"
+msgstr "Dashboard_admin"
+
+#: templates/admin.html:10
+msgid "Menú administrador"
+msgstr "Administrator menu"
+
+#: templates/admin.html:16
+msgid "¡Bienvenido al menú para el administrador!"
+msgstr "Welcome to the administrator menu!"
+
+#: templates/admin.html:17
+msgid ""
+"Si quieres ver a los jugadores registrados en MOVit Game, puedes ir a la pestaña "
+"de jugadores. Si prefieres ver la información de un jugador en concreto, "
+"dirígete a la ventana de búsqueda"
+msgstr ""
+"If you want to see the registered players in MOVit Game, you can go to the "
+"players' tab. If you prefer to see the information of a specific player, go to "
+"the search window"
+
+#: templates/admin.html:18
+msgid ""
+"También puedes ir a la pestaña registro para dar de alta o baja de un nuevo "
+"jugador o terapeuta"
+msgstr ""
+"You can also go to the registration tab to register or cancel a new player or "
+"therapist"
+
+#: templates/admin.html:19 templates/dashboard_terap.html:19
+msgid "¡El equipo de MOVit GAME te desea que tengas una buena experiencia!"
+msgstr "The MOVit GAME team wishes you a good experience!"
+
+#: templates/alta.html:3 templates/alta_admin.html:3
+#: templates/alta_admin_error.html:3 templates/alta_error.html:3
+#: templates/alta_error_admin.html:3 templates/alta_u_admin.html:3
+msgid "baja"
+msgstr "unsubscribe"
+
+#: templates/alta.html:6 templates/alta_error.html:6
+#: templates/menu_registre.html:17
+msgid "Dar de baja"
+msgstr "Unsubscribe"
+
+#: templates/alta.html:55 templates/alta_error.html:55
+#: templates/alta_error_admin.html:55 templates/alta_u_admin.html:55
+msgid ""
+"Por favor, introduce el correo electrónico del jugador que deseas eliminar de la "
+"base de datos:"
+msgstr ""
+"Please enter the email address of the player you wish to delete from the "
+"database:"
+
+#: templates/alta.html:58 templates/alta_admin.html:58
+#: templates/alta_admin_error.html:59 templates/alta_error.html:58
+#: templates/alta_error_admin.html:59 templates/alta_u_admin.html:58
+#: templates/busqueda.html:58 templates/busqueda_admin.html:58
+#: templates/busqueda_error.html:58 templates/busqueda_error_admin.html:58
+#: templates/contact.html:84 templates/registre_codi.html:60
+#: templates/registre_codi_error.html:61 templates/users.html:19
+#: templates/users_admin.html:19
+msgid "Correo electrónico"
+msgstr "Email"
+
+#: templates/alta.html:61 templates/alta_admin.html:61
+#: templates/alta_admin_error.html:62 templates/alta_error.html:61
+#: templates/alta_error_admin.html:62 templates/alta_u_admin.html:61
+msgid "Eliminar"
+msgstr "Delete"
+
+#: templates/alta_admin.html:6 templates/alta_admin_error.html:6
+#: templates/menu_registre_admin.html:20
+msgid "Dar de baja terapeuta"
+msgstr "Unsubscribe therapist"
+
+#: templates/alta_admin.html:55 templates/alta_admin_error.html:55
+msgid ""
+"Por favor, introduce el correo electrónico del terapeuta que deseas eliminar de "
+"la base de datos:"
+msgstr ""
+"Please enter the email address of the therapist you wish to remove from the "
+"database:"
+
+#: templates/alta_admin.html:57 templates/alta_admin_error.html:57
+msgid ""
+"Recuerda que, al eliminar un terapeuta, también eliminarás a sus jugadores "
+"asignados:"
+msgstr ""
+"Remember that by removing a therapist, you will also remove their assigned "
+"players:"
+
+#: templates/alta_admin_error.html:58 templates/alta_error.html:57
+#: templates/alta_error_admin.html:58
+msgid ""
+"El correo electrónico que has puesto no se encuentra dentro de la base de datos. "
+"Por favor, inténtalo de nuevo"
+msgstr "The email you entered can not be found in the database. Please try again"
+
+#: templates/alta_error_admin.html:6 templates/alta_u_admin.html:6
+#: templates/menu_registre_admin.html:16
+msgid "Dar de baja jugador"
+msgstr "Unsubscribe player"
+
+#: templates/base.html:35 templates/base_admin.html:35 templates/base_terap.html:35
+msgid "Menú"
+msgstr "Menu"
+
+#: templates/base.html:41 templates/ranking.html:6
+msgid "Ranking"
+msgstr "Ranking"
+
+#: templates/base.html:44
+msgid "Iniciar sesión"
+msgstr "Login"
+
+#: templates/base.html:47
+msgid "Descarga"
+msgstr "Download"
+
+#: templates/base.html:50 templates/info.html:6
+msgid "Información"
+msgstr "Information"
+
+#: templates/base.html:53 templates/contact.html:6
+msgid "Contacto"
+msgstr "Contact"
+
+#: templates/base.html:56 templates/base_admin.html:56 templates/base_terap.html:50
+#: templates/idioma.html:6 templates/idioma_admin.html:6
+#: templates/idioma_terap.html:6
+msgid "Idioma"
+msgstr "Language"
+
+#: templates/base_admin.html:41 templates/base_terap.html:41 templates/users.html:6
+#: templates/users_admin.html:6
+msgid "Jugadores"
+msgstr "Players"
+
+#: templates/base_admin.html:44 templates/base_terap.html:44
+msgid "Búsqueda"
+msgstr "Search"
+
+#: templates/base_admin.html:47 templates/cientifics.html:6
+msgid "Terapeutas"
+msgstr "Therapists"
+
+#: templates/base_admin.html:50 templates/base_terap.html:47
+#: templates/registre.html:6
+msgid "Registro"
+msgstr "Registration"
+
+#: templates/base_admin.html:53
+msgid "Reiniciar"
+msgstr "Restart"
+
+#: templates/base_admin.html:59 templates/base_terap.html:53
+msgid "Cerrar sesión"
+msgstr "Logout"
+
+#: templates/busqueda.html:3 templates/busqueda_admin.html:3
+#: templates/busqueda_error.html:3 templates/busqueda_error_admin.html:3
+#: templates/logout_done.html:3 templates/menu_registre.html:3
+#: templates/registre_terapeuta.html:3 templates/users.html:3
+#: templates/users_admin.html:3
+msgid "users"
+msgstr "users"
+
+#: templates/busqueda.html:6 templates/busqueda_admin.html:6
+#: templates/busqueda_error.html:6 templates/busqueda_error_admin.html:6
+msgid "Búsqueda de Jugador"
+msgstr "Player Search"
+
+#: templates/busqueda.html:55 templates/busqueda_admin.html:55
+#: templates/busqueda_error.html:55 templates/busqueda_error_admin.html:55
+msgid "Por favor, introduce el correo electrónico del jugador que deseas buscar:"
+msgstr "Please enter the email of the player you want to search for:"
+
+#: templates/busqueda.html:57 templates/busqueda_admin.html:57
+msgid ""
+"Por motivos de seguridad utilice un nombre de usuario ficticio y que le sea "
+"fácil de recordar."
+msgstr "For security reasons, use a fictional username that is easy to remember."
+
+#: templates/busqueda.html:61 templates/busqueda_admin.html:61
+#: templates/busqueda_error.html:61 templates/busqueda_error_admin.html:61
+msgid "Buscar"
+msgstr "Search"
+
+#: templates/busqueda_error.html:57 templates/busqueda_error_admin.html:57
+msgid ""
+"El correo electrónico que has introducido no se encuentra dentro de su base de "
+"datos. Por favor, inténtalo de nuevo"
+msgstr "The email you entered can not be found in the database. Please try again"
+
+#: templates/cientifics.html:3
+msgid "terapeutas"
+msgstr "therapists"
+
+#: templates/cientifics.html:18 templates/ranking.html:16
+#: templates/registre_no_success_psw.html:59
+#: templates/registre_no_success_usuari.html:59
+#: templates/registre_terapeuta.html:59 templates/users.html:18
+#: templates/users_admin.html:18
+msgid "Nombre"
+msgstr "Name"
+
+#: templates/cientifics.html:19
+msgid "Mail"
+msgstr "Email"
+
+#: templates/cientifics.html:20
+msgid "Número de jugadores asignados"
+msgstr "Number of assigned players"
+
+#: templates/cientifics.html:39 templates/partides.html:41
+#: templates/partides_admin.html:42 templates/users.html:41
+#: templates/users_admin.html:41
+msgid "DESCARGA DE INFORMACIÓN"
+msgstr "DOWNLOAD INFORMATION"
+
+#: templates/cientifics.html:40 templates/users.html:42
+#: templates/users_admin.html:42
+msgid "DESCARGA OPINIÓN"
+msgstr "DOWNLOAD OPINION"
+
+#: templates/contact.html:3
+msgid "contact"
+msgstr "contact"
+
+#: templates/contact.html:79
+msgid "Por favor, rellena los siguientes datos para hacernos llegar tu consulta:"
+msgstr "Please fill in the following information to send us your query:"
+
+#: templates/contact.html:81 templates/registre_codi.html:57
+#: templates/registre_codi_admin.html:57 templates/registre_codi_error.html:57
+#: templates/registre_codi_error_admin.html:57
+msgid "Nombre y apellidos"
+msgstr "Name and surname"
+
+#: templates/contact.html:87
+msgid "Resumen"
+msgstr "Summary"
+
+#: templates/contact.html:91
+msgid "Consulta"
+msgstr "Query"
+
+#: templates/contact.html:96 templates/registre_codi.html:63
+#: templates/registre_codi_admin.html:66 templates/registre_codi_error.html:64
+#: templates/registre_codi_error_admin.html:66
+msgid "Enviar"
+msgstr "Send"
+
+#: templates/dashboard.html:3
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/dashboard.html:10
+msgid "Página web oficial del juego MOVit GAME"
+msgstr "Official website of the game MOVit GAME"
+
+#: templates/dashboard.html:16
+msgid ""
+"¡Bienvenidos a la página web oficial del juego MOVit GAME!\n"
+"Esta página permite a cualquier jugador descubrir que es MOVit GAME y las "
+"organizaciones y personas que se encuentran detrás de este gran proyecto."
+msgstr ""
+"Welcome to the official website of the game MOVit GAME! This page allows any "
+"player to discover what MOVit GAME is and the organizations and people behind "
+"this great project."
+
+#: templates/dashboard.html:18
+msgid ""
+"Si tienes un cuenta creada en el juego, te puede interesar ver en que posición "
+"del ranking mundial te encuentras."
+msgstr ""
+"If you have an account created in the game, you may be interested to see where "
+"you are in the world ranking."
+
+#: templates/dashboard.html:18
+msgid ""
+"También puedes descargar los QR que usarás en tu siguiente partida en la pestaña "
+"de descarga."
+msgstr ""
+"You can also download the QR you will use in your next game in the download tab."
+
+#: templates/dashboard.html:19
+msgid ""
+"Si tienes un cuenta creada como terapeuta, puedes acceder a tu menú en la parte "
+"superior de la página web."
+msgstr ""
+"If you have an account created as a therapist, you can access your menu at the "
+"top of the website."
+
+#: templates/dashboard.html:20
+msgid ""
+"Para cualquier duda o aclaración que necesites, no dudes en contactar con "
+"nosotros.\n"
+"             Toda la información para ello, la podrás encontrar en la ventana de "
+"contacto."
+msgstr ""
+"For any questions or clarifications you need, do not hesitate to contact us.\n"
+"             All the information for this can be found in the contact window."
+
+#: templates/dashboard.html:22
+msgid "¡El equipo de MOVit GAME te desea que tengas una buena experiencia! "
+msgstr "The MOVit GAME team wishes you a good experience! "
+
+#: templates/dashboard_terap.html:3
+msgid "Dashboard_terapeuta"
+msgstr "Dashboard_therapist"
+
+#: templates/dashboard_terap.html:10
+msgid "Menú terapeutas"
+msgstr "Therapists menu"
+
+#: templates/dashboard_terap.html:16
+msgid "¡Bienvenidos al menú para terapeutas!"
+msgstr "Welcome to the therapists' menu!"
+
+#: templates/dashboard_terap.html:17
+msgid ""
+"Si quieres ver a tus jugadores asignados, ve a la pestaña de jugadores. Si "
+"prefieres ver la información de un jugador en específico, dirígete a la ventana "
+"de búsqueda"
+msgstr ""
+"If you want to see your assigned players, go to the players' tab. If you prefer "
+"to see the information of a specific player, go to the search window"
+
+#: templates/dashboard_terap.html:18
+msgid ""
+"También puedes ir a la pestaña de registro para dar de alta o de baja a un "
+"jugador"
+msgstr ""
+"You can also go to the registration tab to register or unsubscribe a player"
+
+#: templates/idioma.html:3 templates/idioma_admin.html:3
+#: templates/idioma_terap.html:3
+msgid "idioma"
+msgstr "language"
+
+#: templates/idioma.html:13 templates/idioma_admin.html:13
+#: templates/idioma_terap.html:13
+msgid "Cambia el idioma"
+msgstr "Change language"
+
+#: templates/idioma.html:16 templates/idioma_admin.html:16
+#: templates/idioma_terap.html:16
+msgid "Cambia el idioma:"
+msgstr "Change language:"
+
+#: templates/info.html:3
+msgid "información"
+msgstr "information"
+
+#: templates/info.html:19
+msgid ""
+"El proyecto MOVit Game tiene como objetivo desarrollar una plataforma "
+"interactiva de juego para promover la actividad física de personas con Duchenne "
+"usando la silla de ruedas MOVit. Esta silla tiene como hecho diferenciador que "
+"el control de dirección y velocidad se realiza mediante el movimiento cíclico de "
+"los brazos, en lugar de usar un joystick, lo que contribuye al ejercicio físico "
+"del paciente."
+msgstr ""
+"The MOVit Game project aims to develop an interactive gaming platform to promote "
+"physical activity for people with Duchenne using the MOVit wheelchair. This "
+"chair has as a differentiating fact that the control of direction and speed is "
+"done through the cyclical movement of the arms, instead of using a joystick, "
+"which contributes to the physical exercise of the patient."
+
+#: templates/info.html:20
+msgid ""
+"MOVit Game está dirigido por Joan Lobo, Josep Maria Font y Daniela Tost desde el "
+"Centro de Investigación en Ingeniería Biomédica (CREB) de la \t  Universitat "
+"Politècnica de Catalunya (UPC) y en colaboración con el Hospital Sant Joan de "
+"Déu, Duchenne Parent Project España y el Institut de Robòtica i Informàtica "
+"Industrial (CSIC-UPC)."
+msgstr ""
+"MOVit Game is directed by Joan Lobo, Josep Maria Font and Daniela Tost from the "
+"Center for Research in Biomedical Engineering (CREB) of the Universitat "
+"Politècnica de Catalunya (UPC) and in collaboration with the Hospital Sant Joan "
+"de Déu, Duchenne Parent Project Spain and the Institut de Robòtica i Informàtica "
+"Industrial (CSIC-UPC)."
+
+#: templates/info.html:21
+msgid ""
+" Este proyecto lo llevan a cabo Janet van der Graaf (estudiante de 4º curso de "
+"Ingeniería Biomédica), Aleix Ricou (estudiante de 4º curso de Ingeniería "
+"Industrial) que están realizando su Trabajo de Fin de Grado, y por un "
+"investigador recientemente titulado en Ingeniería Aeronáutica, Oriol Alís."
+msgstr ""
+"This project is carried out by Janet van der Graaf (4th-year student of "
+"Biomedical Engineering) and Aleix Ricou (4th-year student of Industrial "
+"Engineering) who are carrying out their Final Degree Project, and by a recently "
+"qualified researcher in Aeronautical Engineering, Oriol Alís."
+
+#: templates/logout_done.html:12
+msgid "Cierre de cuenta completado."
+msgstr "Logout successfull."
+
+#: templates/menu_registre.html:6 templates/menu_registre_admin.html:6
+msgid "Menú de Registro"
+msgstr "Registration Menu"
+
+#: templates/menu_registre.html:11 templates/menu_registre_admin.html:11
+#: templates/menu_reset.html:11
+msgid "Menú de gestión"
+msgstr "Management menu"
+
+#: templates/menu_registre.html:13 templates/menu_registre_admin.html:13
+msgid "Bienvenido al menú de registro"
+msgstr "Welcome to the registration menu"
+
+#: templates/menu_registre.html:14 templates/menu_registre_admin.html:14
+#: templates/menu_reset.html:15
+msgid "¿Qué deseas hacer?"
+msgstr "What do you want to do?"
+
+#: templates/menu_registre.html:15 templates/registre_no_success_psw.html:73
+#: templates/registre_no_success_usuari.html:73
+#: templates/registre_terapeuta.html:72
+msgid "Registrar"
+msgstr "Register"
+
+#: templates/menu_registre_admin.html:3
+msgid "registre"
+msgstr "register"
+
+#: templates/menu_registre_admin.html:15
+msgid "Registrar jugador"
+msgstr "Register player"
+
+#: templates/menu_registre_admin.html:18
+msgid "Registrar terapeuta"
+msgstr "Register therapist"
+
+#: templates/menu_reset.html:3
+msgid "reset"
+msgstr "reset"
+
+#: templates/menu_reset.html:6
+msgid "Menú de Reinicio"
+msgstr "Reset Menu"
+
+#: templates/menu_reset.html:13
+msgid "Bienvenido al menú de reinicio de la base de datos"
+msgstr "Welcome to the database reset menu"
+
+#: templates/menu_reset.html:14
+msgid ""
+"Recuerda que al reiniciar la base de datos, toda la información se perderà para "
+"siempre"
+msgstr ""
+"Remember that, when you restart the database, all the information will be lost "
+"forever"
+
+#: templates/menu_reset.html:16
+msgid "Reiniciar la base de datos"
+msgstr "Restart the database"
+
+#: templates/menu_reset.html:18
+msgid "Eliminar todos los jugadores"
+msgstr "Delete all players"
+
+#: templates/milestones.html:3 templates/milestones_p.html:3
+#: templates/milestones_u.html:3
+msgid "descarga"
+msgstr "download"
+
+#: templates/milestones.html:6 templates/milestones.html:89
+#: templates/milestones_p.html:6 templates/milestones_p.html:90
+#: templates/milestones_u.html:6 templates/milestones_u.html:90
+msgid "Descarga de QR"
+msgstr "Download QR"
+
+#: templates/milestones.html:79 templates/milestones_p.html:79
+#: templates/milestones_u.html:79
+msgid ""
+"Por favor, introduce tu usuario y contraseña para poder continuar con la "
+"descarga:"
+msgstr "Please, enter your username and password to continue the download:"
+
+#: templates/milestones.html:81 templates/milestones_p.html:82
+#: templates/milestones_u.html:82 templates/registre.html:60
+msgid "Usuario"
+msgstr "Username"
+
+#: templates/milestones.html:84 templates/milestones_p.html:85
+#: templates/milestones_u.html:85 templates/registre.html:69
+#: templates/registre_no_success_psw.html:66
+#: templates/registre_no_success_usuari.html:66
+#: templates/registre_terapeuta.html:65
+msgid "Contraseña"
+msgstr "Password"
+
+#: templates/milestones_p.html:84
+msgid "Contraseña incorrecta. Por favor, inténtalo de nuevo"
+msgstr "Incorrect password. Please try again"
+
+#: templates/milestones_u.html:81
+msgid ""
+"El usuario que has puesto no se encuentra dentro de la base de datos. Por favor, "
+"inténtalo de nuevo"
+msgstr "The user you have placed is not in the database. Please try again"
+
+#: templates/partides.html:3 templates/partides_admin.html:3
+msgid "partides"
+msgstr "games"
+
+#: templates/partides.html:6 templates/partides_admin.html:6
+msgid "Partidas del Jugador"
+msgstr "Player Matches"
+
+#: templates/partides.html:15 templates/partides_admin.html:16
+#: templates/users.html:21 templates/users_admin.html:21
+msgid "Dificultad"
+msgstr "Difficulty"
+
+#: templates/partides.html:16 templates/partides_admin.html:17
+msgid "Hitos"
+msgstr "Milestones"
+
+#: templates/partides.html:17 templates/partides_admin.html:18
+msgid "Puntos"
+msgstr "Score"
+
+#: templates/partides.html:18 templates/partides_admin.html:19
+msgid "Pausas"
+msgstr "Pauses"
+
+#: templates/partides.html:19 templates/partides_admin.html:20
+msgid "Fecha"
+msgstr "Date"
+
+#: templates/ranking.html:3
+msgid "ranking"
+msgstr "ranking"
+
+#: templates/ranking.html:15
+msgid "Posición"
+msgstr "Position"
+
+#: templates/ranking.html:17
+msgid "Puntuación"
+msgstr "Score"
+
+#: templates/ranking.html:18
+msgid "Fecha de la partida"
+msgstr "Date of match"
+
+#: templates/registre.html:3
+msgid "registrp"
+msgstr "register"
+
+#: templates/registre.html:57 templates/registre_no_success_psw.html:57
+#: templates/registre_no_success_usuari.html:57
+#: templates/registre_terapeuta.html:57
+msgid "Por favor, rellena los siguientes datos:"
+msgstr "Please fill in the following information:"
+
+#: templates/registre.html:59
+msgid ""
+"Por motivos de seguridad usa un nombre de usuario ficticio y que te sea fácil de "
+"recordar."
+msgstr ""
+"For security reasons, use a fictitious username that is easy for you to remember."
+
+#: templates/registre.html:63 templates/registre_no_success_psw.html:62
+#: templates/registre_no_success_usuari.html:63
+#: templates/registre_terapeuta.html:62
+msgid "E-mail"
+msgstr "Email"
+
+#: templates/registre.html:66
+msgid "Codigo"
+msgstr "Code"
+
+#: templates/registre.html:72 templates/registre_no_success_psw.html:69
+#: templates/registre_no_success_usuari.html:69
+#: templates/registre_terapeuta.html:68
+msgid "Repite contraseña"
+msgstr "Repeat password"
+
+#: templates/registre.html:77
+msgid "Regístrate"
+msgstr "Sign up"
+
+#: templates/registre_codi.html:3 templates/registre_codi_admin.html:3
+#: templates/registre_codi_error.html:3 templates/registre_codi_error_admin.html:3
+msgid "mail"
+msgstr "mail"
+
+#: templates/registre_codi.html:6 templates/registre_codi_admin.html:6
+#: templates/registre_codi_error.html:6 templates/registre_codi_error_admin.html:6
+msgid "Envío de codigo"
+msgstr "Code sending"
+
+#: templates/registre_codi.html:55 templates/registre_codi_error.html:55
+msgid ""
+"Por favor, introduce el nombre y correo electónico del jugador que deseas "
+"registrar."
+msgstr "Please enter the name and email of the player you wish to register."
+
+#: templates/registre_codi.html:59 templates/registre_codi_admin.html:59
+#: templates/registre_codi_error.html:59
+#: templates/registre_codi_error_admin.html:59
+msgid ""
+"El código de 8 dígitos será generado de forma aleatoria y solo podrás saber cual "
+"es si el jugador decide comunicártelo."
+msgstr ""
+"The 8-digit code will be generated randomly. You can only know it if the player "
+"decides to communicate it to you."
+
+#: templates/registre_codi_admin.html:55
+#: templates/registre_codi_error_admin.html:55
+msgid ""
+"Por favor, introduce el nombre del jugador que deseas registrar, el correo "
+"electrónico donde deseas enviar el código de registro y el correo electrónico "
+"del terapeuta al que deseas asociar el jugador:"
+msgstr ""
+"Please enter the player's name you want to register, the email where you want to "
+"send the registration code and the email of the therapist you want to associate "
+"the player with:"
+
+#: templates/registre_codi_admin.html:60
+#: templates/registre_codi_error_admin.html:61
+msgid "Correo electrónico del jugador"
+msgstr "Player's email"
+
+#: templates/registre_codi_admin.html:62
+#: templates/registre_codi_error_admin.html:63
+msgid "Correo electrónico del terapeuta"
+msgstr "Therapist's email"
+
+#: templates/registre_codi_error.html:60
+msgid ""
+"El correo electrónico no se ha podido enviar de forma satisfactoria. Por favor, "
+"revisa que la dirección introducida exista y no se encuentra actualmente en la "
+"base de datos"
+msgstr ""
+"The email could not be sent successfully. Please check that the entered address "
+"exists and is not currently in the database"
+
+#: templates/registre_codi_error_admin.html:60
+msgid ""
+"El correo electrónico no se ha podido enviar de forma satisfactoria. Por favor, "
+"revisa que las direcciones introducidas existan"
+msgstr ""
+"The email could not be sent successfully. Please check that the addresses "
+"entered exist"
+
+#: templates/registre_no_success_psw.html:3
+#: templates/registre_no_success_usuari.html:3
+msgid "registro"
+msgstr "register"
+
+#: templates/registre_no_success_psw.html:6
+#: templates/registre_no_success_usuari.html:6 templates/registre_terapeuta.html:6
+msgid "Registrar Terapeuta"
+msgstr "Register Therapist"
+
+#: templates/registre_no_success_psw.html:65
+msgid "La contraseña que has introducido no es la misma que en la repetición"
+msgstr "The password you entered is not the same as in the repetition"
+
+#: templates/registre_no_success_usuari.html:62
+msgid ""
+"El correo electrónico que has introducido ya existe en la base de datos, "
+"porfavor introduce uno diferente"
+msgstr ""
+"The email you entered already exists in the database, please enter a different "
+"one"
+
+#: templates/registre_success.html:3
+msgid "registrar"
+msgstr "register"
+
+#: templates/registre_success.html:6
+msgid "Registrarse"
+msgstr "Sign in"
+
+#: templates/registre_success.html:12
+msgid "Su jugador ha sido registrado correctamente."
+msgstr "Your player has been successfully registered."
+
+#: templates/registre_success.html:13
+msgid ""
+"A continuación podrá realizar el test entrando en la aplicación\n"
+"       que su terapeuta le haya indicado. Deseamos que disfrute de su "
+"experiencia."
+msgstr ""
+"Now you can perform the test by entering the application\n"
+"       that your therapist has indicated. We hope you enjoy this experience."
+
+#: templates/users.html:20 templates/users_admin.html:20
+msgid "Registrado"
+msgstr "Registered"
+
+#: templates/security/login_user.html:4
+msgid "Inicio de sesión"
+msgstr "Login"
+
+#: templates/security/login_user.html:10
+msgid "Login"
+msgstr "Login"
+
+#~ msgid "encargado de planificación, coordinación y de la aplicación kivy."
+#~ msgstr ""
+#~ "In charge of planning, coordination and developing the kivy application."
+
+#~ msgid "DESCARGA"
+#~ msgstr "DOWNLOAD"
+
+#~ msgid ""
+#~ "Por motivos de seguridad utilize un nombre de usuario ficticio y que le sea "
+#~ "fàcil de recordar."
+#~ msgstr ""
+#~ "For security reasons, use a fictional username that is easy to remember."
+
+#~ msgid "Terapeuta"
+#~ msgstr "Therapist"
+
+#~ msgid ""
+#~ "Si tiene dudas, comentarios o desea contactar con los\n"
+#~ "          desarrolladores de la página rellena el formulario y\n"
+#~ "          nos pondremos en contacto lo antes posible"
+#~ msgstr ""
+#~ "If you have questions, comments or want to contact the\n"
+#~ "          developers of this page, fill out the form and\n"
+#~ "          we will contact you as soon as possible"
+
+#~ msgid "\"Nombre:\""
+#~ msgstr "\"Name:\""
+
+#~ msgid "\"Correo electrónico:\""
+#~ msgstr "\"Email:\""
+
+#~ msgid "\"Mensaje:\""
+#~ msgstr "\"Message:\""
+
+#~ msgid "Envía"
+#~ msgstr "Send"
+
+#~ msgid ""
+#~ "O sinó, contacte con nosotros directamente a través del siguiente correo "
+#~ "electrónico:"
+#~ msgstr "Otherwise, contact us throughout the following email:"
+
+#~ msgid "Disfruta descubriéndote"
+#~ msgstr "Enjoy discovering yourself"
+
+#~ msgid ""
+#~ "Conoce una nueva manera de realizar tests de forma\n"
+#~ "     rápida y entretenida, mejorando la experiencia de todo el proceso."
+#~ msgstr ""
+#~ "Learn a new way of performing\n"
+#~ "     fast and entertaining tests, improving the experience of the whole "
+#~ "process."
+
+#~ msgid ""
+#~ "Además, aquí encontrarás la herramienta ideal para gestionar\n"
+#~ "     la realización de tests y visualizar las respuestas de cada\n"
+#~ "     participante de forma rápida."
+#~ msgstr ""
+#~ "In addition, you will find here an ideal tool to manage\n"
+#~ "     tests and visualize each\n"
+#~ "     participant's responses."
+
+#~ msgid ""
+#~ "Esta página ha sido creada por estudiantes de Ingeniería Industrial de la UPC:"
+#~ msgstr ""
+#~ "This page has been created by students of Industrial Engineering in the UPC:"
+
+#~ msgid "encargado de comunicación y gestor de la base de datos."
+#~ msgstr "In charge of communication and management of the database."
+
+#~ msgid "encargado de planificación, coordinación y aplicación kivy."
+#~ msgstr "In charge of the plannification, coordination and the kivy application."
+
+#~ msgid "encargada de la validación y utilidad de la página web."
+#~ msgstr "In charge of the validation and usefulness of the web page."
+
+#~ msgid ""
+#~ "Su uso se centra en la realización\n"
+#~ "     de tests interactivos y su gestión. Forma parte de un trabajo guiado "
+#~ "através de\n"
+#~ "     los objetivos de \"Proyecto II\", para asistir a la posible demanda de "
+#~ "una interficie\n"
+#~ "     más didáctica y entretenida en test largos; especialmente enfocado hacia "
+#~ "el campo de\n"
+#~ "     la psicología."
+#~ msgstr ""
+#~ "Its use is focused on the realization\n"
+#~ "     and management of interactive tests. It is part of a guided work anf "
+#~ "follows\n"
+#~ "     the objectives of \"Project II\", of assisting the possible demand of a\n"
+#~ "     more didactic and entertaining interface in long tests; especially "
+#~ "focused on the field of\n"
+#~ "     psychology."
+
+#~ msgid ""
+#~ "Si quiere requerir de estos servicios como terapeuta o gestor de test debe "
+#~ "ponerse\n"
+#~ "     en contacto con nosotros através de la sección de \"contacto\"en el menú "
+#~ "principal superior\n"
+#~ "     exponiendo su petición. En caso de contratar finalmente el producto se "
+#~ "le asignará un\n"
+#~ "     usuario y contraseña personal con los que podrá visualizar sus tests y "
+#~ "los resultados de \n"
+#~ "     sus clientes fácilmente; así como descargarlos en formato excel para "
+#~ "mayor posibilidad de estudio."
+#~ msgstr ""
+#~ "If you want to require these services as a therapist or test manager you "
+#~ "should\n"
+#~ "     contact us through the \"contact\" section in the top menu\n"
+#~ "     exposing your request. In case of finally contracting the product you "
+#~ "will be assigned a\n"
+#~ "     user and personal password with which you can view your tests and the "
+#~ "results of\n"
+#~ "     your customers easily; as well as download them in excel format for more "
+#~ "possibilities."
+
+#~ msgid "Por favor, rellene los siguientes datos:"
+#~ msgstr "Please fill in the following information:"
+
+#~ msgid "Su usuario no ha sido registrado correctamente."
+#~ msgstr "Your user has not been registered correctly."
+
+#~ msgid ""
+#~ "Se ha producido un error al registrar el siguiente usuario.\n"
+#~ "     Por favor inténtelo de nuevo y asegúrese de que los campos siguen el "
+#~ "siguiente requisito:"
+#~ msgstr ""
+#~ "An error occurred while registering the user.\n"
+#~ "     Please try again and make sure that the fields follow the following "
+#~ "requirement:"
+
+#~ msgid "Los dos campos de contraseña deben ser idénticos."
+#~ msgstr "Both password fields must be identical."
+
+#~ msgid "Puede que su nombre de usuario ya esté en uso y deba escoger otro."
+#~ msgstr ""
+#~ "It may be that your username is already in use and you should choose another "
+#~ "one."
+
+#~ msgid "Su usuario ha sido registrado correctamente."
+#~ msgstr "Your user has been registered correctly."
+
+#~ msgid "Menú Terapeuta"
+#~ msgstr "Therapist Menu"
+
+#~ msgid "Inicio de sesión completado."
+#~ msgstr "Login completed"
+
+#~ msgid "¿Qué desea hacer?"
+#~ msgstr "What would you like to do?"
+
+#~ msgid "Usuarios"
+#~ msgstr "Users"
+
+#~ msgid "Intentos"
+#~ msgstr "Attempts"
+
+#~ msgid "*EB: sesgo externalizador"
+#~ msgstr "* EB: externalizing bias"
+
+#~ msgid "*PB: sesgo personalizador"
+#~ msgstr "* PB: customizing bias"
+
+#~ msgid "DESCARGA INFORMACIÓN"
+#~ msgstr "DOWNLOAD INFORMATION"

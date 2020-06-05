@@ -1,0 +1,35 @@
+{%extends "base.html" %}
+
+{% set title=_("ranking") %}
+
+{% block title %}
+{{_('Ranking')}}
+{% endblock %}
+
+{% block content %}
+
+<br>
+<table class ="table" align="center">
+    <thead>
+      <tr align="center">
+	<th>{{_('Posición')}}</th>
+        <th>{{_('Nombre')}}</th>
+        <th>{{_('Puntuación')}}</th>
+	<th>{{_('Fecha de la partida')}}</th>
+      </tr>
+    </thead>
+{% for item in users %}
+    <tbody>
+      <tr align="center">
+	<td>{{item.rank}}</td>
+        <td>{{item.player}}</td>
+        <td> {{item.total_points}}</td>
+	<td> {{item.dia_partida}}</td>
+      </tr>
+    </tbody>
+{% endfor %}
+
+ </table>
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{%extends "base_admin.html" %}
+
+{% set title=_("terapeutas") %}
+
+{% block title %}
+{{_('Terapeutas')}}
+{% endblock %}
+
+{% block content %}
+<!--
+  <div class="p-5 text-center">
+     <h2 class="display-4">Usuarios</h2>
+  </div> -->
+<br>
+<table class="table">
+    <thead>
+      <tr align="center">
+        <th>{{_('Nombre')}}</th>
+        <th>{{_('Mail')}}</th>
+        <th>{{_('Número de jugadores asignados')}}</th>
+      </tr>
+    </thead>
+{% for item in users if item.usuari != None %}
+    <tbody>
+      <tr align="center">
+        <td>{{item.usuari}}</td>
+        <td> {{item.email}}</td>
+        <td> {{item.num_usuaris}}</td>
+      </tr>
+    </tbody>
+{% endfor %}
+
+  </table>
+<br>
+<!--<div class="p-5 text-right">
+     <p><font size="3">:)</font></p>
+</div>-->
+<div> <center>
+     <a href="/download_terap" target="blank"><button class="btn btn-primary">{{_('DESCARGA DE INFORMACIÓN')}}</button></a>
+<!--     <a href="/downloads2" target="blank"><button class="btn btn-primary">{{_('DESCARGA OPINIÓN')}}</button></a>--></center>
+</div>
+
+{% endblock %}
