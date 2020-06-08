@@ -29,7 +29,7 @@ def sendlogin():
             d['response']= 'Contrasenya incorrecta'
         else:
             d['login'] = 'True'
-            d['response']= 'Usuari i contrasenya correctes'        
+            d['response']= 'Inici de sessió correcte'            
         user.login=d
         db.session.commit()
     return json.dumps({"success": True, "message": "user registered", "code": 200}), {'Content-Type': "application/json"}
@@ -39,12 +39,14 @@ def sendlogin():
 def getlogin():
     users=User.query.all()
     for user in users:
+        d= {'login':'False','response':'L\'usuari no es troba a la base de dades'}
         if user.login != {}:
             d=user.login
             user.login={}
-            db.session.commit()        
-            return json.dumps(d),200,{'Contact-Type': "application/json"}
-    return json.dumps({'login':'False','response':'L\'usuari no es troba en la base de dades'}),200,{'Contact-Type': "application/json"}
+            db.session.commit() 
+            break
+
+    return json.dumps(d),200,{'Contact-Type': "application/json"}
 
 ### sendregister() gets code, username, nickname and password from the app
 @appmanagement_blueprint.route('/sendregister', methods=['POST'])
@@ -66,7 +68,7 @@ def sendregister():
             
         elif nickname in t:
             d['register'] = 'False'
-            d['response'] = 'L\'usuari introduït ja es troba la base de dades'
+            d['response'] = 'L\'usuari introduït ja es troba a la base de dades'
 
         else:
             d['register'] = 'True'
@@ -84,12 +86,14 @@ def sendregister():
 def getregister():
     users=User.query.all()
     for user in users:
+        d={'register':'False','response':'Codi incorrecte, revisa que el codi sigui el mateix que el rebut al correu electrònic introduït'}
         if user.registre != {}:
             d=user.registre
             user.registre={}
             db.session.commit()        
-            return json.dumps(d),200,{'Contact-Type': "application/json"}
-    return json.dumps({'register':'False','response':'Codi incorrecte, revisa que el codi sigui el mateix que el rebut al correu electrònic introduït'}),200,{'Contact-Type': "application/json"}
+            break
+        
+    return json.dumps(d),200,{'Contact-Type': "application/json"}
 
 
 ### startgame() gets the user
@@ -173,154 +177,154 @@ def typegame(username):
 
 def narrativa(level):
     t=[]
-    extra=['Crec que li agradava molt la natura','Recordo que tenia la mirada perduda','Crec recordar que no havia dormit bé','Només recordo que li agradava molt ballar','Recordo que tenia molt bon gust musical']
+    extra=['Crec que li agradava molt la natura.','Sé que col·leccionava segells.','Em va dir que no havia dormit bé.','Només recordo que li agradava molt ballar.','Sé que tenia molt bon gust musical.']
     num=random.randrange(0,len(extra),1)
     if level>1:
         t.append(extra[num])
     guilty=random.randrange(1,12,1)
     if guilty==1:
-        t.append('Només recordo que tenia ulls parells')
-        t.append('Recordo que portava algun accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que tenia dents')
+        t.append('Només recordo que tenia els ulls parells.')
+        t.append('Recordo que portava algun accessori.')
+        t.append('Tenia una mena d\'antenes o banyes.')
+        t.append('Només recordo que tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls senars')
-            t.append('Recordo llegir al diari que tenia ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia els ulls senars.')
+            t.append('Recordo llegir al diari que tenia els ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes ni banyes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
                             
         
     elif guilty==2:
-        t.append('Només recordo que tenia ulls senars')
-        t.append('Recordo que portava algun accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que tenia dents')
+        t.append('Només recordo que tenia els ulls senars.')
+        t.append('Recordo que portava algun accessori.')
+        t.append('Tenia una mena d\'antenes o banyes.')
+        t.append('Només recordo que tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls parells')
-            t.append('Recordo llegir al diari que tenia ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia els ulls parells.')
+            t.append('Recordo llegir al diari que tenia els ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes ni banyes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==3:
-        t.append('Només recordo que tenia ulls parells')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que tenia dents')
+        t.append('Només recordo que tenia els ulls parells.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Tenia una mena d\'antenes o banyes o semblant.')
+        t.append('Només recordo que tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls senars')
-            t.append('Recordo llegir al diari que tenia ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia els ulls senars.')
+            t.append('Recordo llegir al diari que tenia els ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes ni banyes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==4:
-        t.append('Només recordo que tenia ulls senars')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que tenia dents')
+        t.append('Només recordo que tenia els ulls senars.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Tenia una mena d\'antenes o banyes o semblant.')
+        t.append('Només recordo que tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls parells')
-            t.append('Recordo llegir al diari que tenia ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia els ulls parells.')
+            t.append('Recordo llegir al diari que tenia els ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes ni banyes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==5:
-        t.append('Només recordo que tenia ulls parells')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que no tenia dents')
+        t.append('Només recordo que tenia els ulls parells.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Tenia una mena d\'antenes o banyes o semblant.')
+        t.append('Només recordo que no tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls senars')
-            t.append('Recordo llegir al diari que tenia ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia els ulls senars.')
+            t.append('Recordo llegir al diari que tenia els ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes ni banyes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==6:
-        t.append('Només recordo que tenia ulls senars')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que no tenia dents')
+        t.append('Només recordo que tenia els ulls senars.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Tenia una mena d\'antenes o banyes o semblant.')
+        t.append('Només recordo que no tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls parells')
-            t.append('Recordo llegir al diari que tenia ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia els ulls parells.')
+            t.append('Recordo llegir al diari que tenia els ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes ni banyes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==7:
-        t.append('Només recordo que tenia ulls parells')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que no tenia dents')
+        t.append('Només recordo que tenia els ulls parells.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Recordo que no tenia antenes ni banyes.')
+        t.append('Només recordo que no tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls senars')
+            t.append('Només recordo que tenia els ulls senars.')
             t.append('Recordo llegir al diari que tenia ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
-                t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+                t.append('Només recordo que tenia antenes.')
+                t.append('Recordo veure a les notícies que no tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==8:
-        t.append('Només recordo que tenia ulls senars')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que no tenia antenes')
-        t.append('Només recordo que no tenia dents')
+        t.append('Només recordo que tenia els ulls senars.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Recordo que no tenia antenes ni banyes.')
+        t.append('Només recordo que no tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls parells')
-            t.append('Recordo llegir al diari que tenia ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
+            t.append('Només recordo que tenia ulls parells.')
+            t.append('Recordo llegir al diari que tenia els ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que tenia antenes')
+                t.append('Només recordo que tenia antenes.')
                 t.append('Recordo veure a les notícies que no tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==9:
-        t.append('Només recordo que tenia ulls parells')
-        t.append('Recordo que portava algun accessori')
-        t.append('Recordo que tenia antenes')
-        t.append('Només recordo que no tenia dents')
+        t.append('Només recordo que tenia els ulls parells.')
+        t.append('Recordo que portava algun accessori.')
+        t.append('Tenia una mena d\'antenes o banyes o semblant.')
+        t.append('Només recordo que no tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls senars')
+            t.append('Només recordo que tenia els ulls senars.')
             t.append('Recordo llegir al diari que tenia ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que no tenia antenes')
+                t.append('Només recordo que no tenia antenes.')
                 t.append('Recordo veure a les notícies que tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==10:
-        t.append('Només recordo que tenia ulls senars')
-        t.append('Recordo que portava algun accessori')
-        t.append('Recordo que no tenia antenes')
-        t.append('Només recordo que no tenia dents')
+        t.append('Només recordo que tenia els ulls senars.')
+        t.append('Recordo que portava algun accessori.')
+        t.append('Recordo que no tenia antenes ni banyes.')
+        t.append('Només recordo que no tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls parells')
+            t.append('Només recordo que tenia els ulls parells.')
             t.append('Recordo llegir al diari que tenia ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que tenia antenes')
+                t.append('Només recordo que tenia antenes.')
                 t.append('Recordo veure a les notícies que no tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     elif guilty==11:
-        t.append('Només recordo que tenia ulls parells')
-        t.append('Recordo que no portava cap accessori')
-        t.append('Recordo que no tenia antenes')
-        t.append('Només recordo que tenia dents')
+        t.append('Només recordo que tenia els ulls parells.')
+        t.append('Recordo que no portava cap accessori.')
+        t.append('Recordo que no tenia antenes ni banyes.')
+        t.append('Només recordo que tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls senars')
+            t.append('Només recordo que tenia els ulls senars.')
             t.append('Recordo llegir al diari que tenia ulls parells i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que tenia antenes')
+                t.append('Només recordo que tenia antenes.')
                 t.append('Recordo veure a les notícies que no tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
               
     elif guilty==12:
-        t.append('Només recordo que tenia ulls senars')
-        t.append('Recordo que portava algun accessori')
-        t.append('Recordo que no tenia antenes')
-        t.append('Només recordo que tenia dents')
+        t.append('Només recordo que tenia els ulls senars.')
+        t.append('Recordo que portava algun accessori.')
+        t.append('Recordo que no tenia antenes ni banyes.')
+        t.append('Només recordo que tenia dents.')
         if level>2:
-            t.append('Només recordo que tenia ulls parells')
+            t.append('Només recordo que tenia els ulls parells.')
             t.append('Recordo llegir al diari que tenia ulls senars i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             if level>3:
-                t.append('Només recordo que tenia antenes')
+                t.append('Només recordo que tenia antenes.')
                 t.append('Recordo veure a les notícies que no tenia antenes i un còmplice. Vigila amb el que et diuen que pot no ser cert!')
             
     return t,guilty

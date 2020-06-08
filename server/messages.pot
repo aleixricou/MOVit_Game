@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-03 00:28+0200\n"
+"POT-Creation-Date: 2020-06-06 12:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,13 +33,13 @@ msgstr ""
 msgid ""
 "Si quieres ver a los jugadores registrados en MOVit Game, puedes ir a la "
 "pestaña de jugadores. Si prefieres ver la información de un jugador en "
-"concreto, dirígete a la ventana de búsqueda"
+"concreto, dirígete a la ventana de búsqueda."
 msgstr ""
 
 #: templates/admin.html:18
 msgid ""
 "También puedes ir a la pestaña registro para dar de alta o baja de un "
-"nuevo jugador o terapeuta"
+"nuevo jugador o terapeuta."
 msgstr ""
 
 #: templates/admin.html:19 templates/dashboard_terap.html:19
@@ -279,7 +279,7 @@ msgstr ""
 
 #: templates/dashboard.html:18
 msgid ""
-"Si tienes un cuenta creada en el juego, te puede interesar ver en que "
+"Si tienes una cuenta creada en el juego, te puede interesar ver en que "
 "posición del ranking mundial te encuentras."
 msgstr ""
 
@@ -291,8 +291,8 @@ msgstr ""
 
 #: templates/dashboard.html:19
 msgid ""
-"Si tienes un cuenta creada como terapeuta, puedes acceder a tu menú en la"
-" parte superior de la página web."
+"Si tienes una cuenta creada como terapeuta, puedes acceder a tu menú en "
+"la parte superior de la página web."
 msgstr ""
 
 #: templates/dashboard.html:20
@@ -323,13 +323,13 @@ msgstr ""
 msgid ""
 "Si quieres ver a tus jugadores asignados, ve a la pestaña de jugadores. "
 "Si prefieres ver la información de un jugador en específico, dirígete a "
-"la ventana de búsqueda"
+"la ventana de búsqueda."
 msgstr ""
 
 #: templates/dashboard_terap.html:18
 msgid ""
 "También puedes ir a la pestaña de registro para dar de alta o de baja a "
-"un jugador"
+"un jugador."
 msgstr ""
 
 #: templates/idioma.html:3 templates/idioma_admin.html:3

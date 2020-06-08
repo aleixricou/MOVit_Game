@@ -66,6 +66,9 @@ def create_app():
         name = request.form['name']
         email_cientific = current_user.email
         idi=get_locale()
+        user = User.query.filter_by(email=comail).first()
+        if user != None:
+            return render_template("registre_codi_error.html")
         try:
             if idi=='es':
                 msg = Message(gettext('Envío de código de registro'), recipients=[comail])
@@ -76,12 +79,11 @@ def create_app():
             elif idi=='en':
                 msg = Message('Sending registration code', recipients=[comail])
                 msg.html = '<em>Please do not reply to this message</em> <p>Welcome to MOVit Game,</p> <p>The code to register in the application is as follows: <b>'+code+'</b>.</p> <br> <p>The MOVit GAME team wishes you have a good experience!</p>'
-                
+            mail.send(msg)    
             db.create_all()
             user_datastore.create_user(email= comail, codi=code, email_cientific = email_cientific, nom=name)
             user_datastore.add_role_to_user(comail,'patient')
             db.session.commit()
-            mail.send(msg)
             return render_template('dashboard_terap.html')
         except:
             return render_template("registre_codi_error.html")
@@ -100,6 +102,9 @@ def create_app():
         idi=get_locale()
         if cientific == None:
             return render_template("registre_codi_error_admin.html")
+        user = User.query.filter_by(email=comail).first()
+        if user != None:
+            return render_template("registre_codi_error_admin.html")
         else:
             try:
                 if idi=='es':
@@ -111,11 +116,11 @@ def create_app():
                 elif idi=='en':
                     msg = Message('Sending registration code', recipients=[comail])
                     msg.html = '<em>Please do not reply to this message</em> <p>Welcome to MOVit Game,</p> <p>The code to register in the application is as follows: <b>'+code+'</b>.</p> <br> <p>The MOVit GAME team wishes you have a good experience!</p>'
+                mail.send(msg)
                 db.create_all()
                 user_datastore.create_user(email= comail, codi=code, email_cientific = email_cientific, nom=name)
                 user_datastore.add_role_to_user(comail,'patient')
                 db.session.commit()
-                mail.send(msg)
                 return render_template('admin.html')
             except:
                 return render_template("registre_codi_error_admin.html")

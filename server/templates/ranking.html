@@ -18,7 +18,7 @@
 	<th>{{_('Fecha de la partida')}}</th>
       </tr>
     </thead>
-{% for item in users %}
+{% for item in users if item.total_points != None %}
     <tbody>
       <tr align="center">
 	<td>{{item.rank}}</td>
